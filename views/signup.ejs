@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Authrex</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="py-5 flex-center">
+
+    <div class="container">
+        <div class="card card-control bg-primary text-white">
+            <div class="card-body">
+                <div id="alerts">
+                    <% if (error_flash != '') { %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error_flash %>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <% } %>
+                    <% if (success_flash != '') { %>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <%= success_flash %>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <% } %>
+                    <% if (typeof error != 'undefined') { %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error %>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <% } %>
+                    <% if (typeof success != 'undefined') { %>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <%= success %>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <% } %>
+
+                </div>
+                <h4 class="my-2 text-center">Sign Up with</h4>
+                <div class="my-2">
+                    <a href="/auth/google" class="btn btn-block btn-danger btn-google">
+                        <span class="fab fa-google mr-2"></span>
+                        Continue with Google
+                    </a>
+                    <a href="/auth/facebook" class="btn btn-block btn-info btn-google">
+                        <span class="fab fa-facebook mr-2"></span>
+                        Continue with Facebook
+                    </a>
+                </div>
+                <p class="text-center">Or</p>
+                <div>
+                    <form action="/signup" method="POST" id="signupForm">
+                        <div class="form-group">
+                            <label for="nameInp">Name</label>
+                            <input type="text" class="form-control" id="nameInp" placeholder="Enter name" name="name" required value="<%- typeof name == 'undefined' ? '' : name  %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailInp">Email address</label>
+                            <input type="email" class="form-control" id="emailInp" placeholder="Enter email address" name="email" required value="<%- typeof email == 'undefined' ? '' : email  %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordInp">Password</label>
+                            <input type="password" class="form-control" id="passwordInp" placeholder="Enter password" name="password" required value="<%- typeof password == 'undefined' ? '' : password  %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordInp2">Confirm Password</label>
+                            <input type="password" class="form-control" id="passwordInp2" placeholder="Re-enter password" name="password2" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn-info">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <a class="text-center d-block" href="/login">Already have an account? Login</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+
+</html>

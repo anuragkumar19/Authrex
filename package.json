@@ -1,0 +1,53 @@
+{
+  "name": "authrex",
+  "version": "1.0.0",
+  "description": "Full Authentication Express & Passport Email, Google Oauth20, Facebook Login and Github Oauth with verification",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuragkumar19/Authrex.git"
+  },
+  "author": "Anurag Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anuragkumar19/Authrex/issues"
+  },
+  "homepage": "https://github.com/anuragkumar19/Authrex#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.17",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.4.16",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "uuid": "^8.3.1",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
+  }
+}
